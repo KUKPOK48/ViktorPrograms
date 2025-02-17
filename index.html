@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viktor Programs</title>
     <style>
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('C:/Users/andre/Desktop/JOTF/сайт/ыфв/V/сфйт/0ba0d609-5c9a-450b-9cd8-14213be2918d.png') no-repeat center center fixed;
+            background: url('C:/Users/andre/Desktop/JOTF/website/background.png') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
 
         header {
@@ -49,7 +48,7 @@
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            backdrop-filter: blur(10px); /* Добавляем размытие фона */
+            backdrop-filter: blur(10px);
             position: relative;
             z-index: 2;
         }
@@ -92,18 +91,6 @@
             z-index: 2;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Секция с информацией */
         .info-section {
             text-align: center;
             padding: 50px 0;
@@ -117,14 +104,6 @@
         .info-section p {
             line-height: 1.8;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
 
         .bottom-content {
             text-align: center;
@@ -136,62 +115,73 @@
             animation: fadeIn 2s ease-in-out forwards;
         }
 
-        .bottom-content h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .tg-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background: #0088cc;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
         }
 
-        .bottom-content p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .tg-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .tg-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
 <body>
     <header>
-        <img 
-            src="e4aad658-e959-41d3-a6f1-79aa5aa1e27a-removebg-preview (1).png" 
-            alt="Логотип Viktor Booster" 
-            onmouseover="playSound()" 
-            onmouseout="stopSound()"
-        >
+        <img src="logo.png" alt="Viktor Booster Logo" onmouseover="playSound()" onmouseout="stopSound()">
         <h1>Viktor Programs</h1>
     </header>
 
     <main>
         <div class="info-section">
-            <p><b>Программа для защиты вашего ПК</b></p>
-            <h2>v1.0.0(beta)</h2>
-            <p>Viktor Antivirus — это инструмент, который поможет вам не значительно увеличить защититу вашего компьютера.</p>
-            <p>Очищает ненужные файлы, видет скрытые файлы, а также улучшает общую защиту системы.</p>
+            <p><b>Program to protect your PC</b></p>
+            <h2>v1.0.0 (beta)</h2>
+            <p>Viktor Antivirus is a tool that helps you improve your computer’s security.</p>
+            <p>It cleans unnecessary files, detects hidden files, and enhances overall system protection.</p>
         </div>
 
         <a href="ViktorAntivirus.exe" download="ViktorAntivirus.exe">
-            <button>Скачать Viktor Antivirus </button>
-        </a>        
+            <button>Download Viktor Antivirus</button>
+        </a>
     </main>
 
     <div class="bottom-content">
-        <h2>Основные функции:</h2>
+        <h2>Main Features:</h2>
         <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Очистка временных файлов и кэша</li>
-            <li>мониторинг скрытых работающих программ</li>
-            <li>Ускорение нахождение простых вирусов</li>
-            <li>Автоматическое выявление проблем вредоносных файлов</li>
-            <li>Безопасное удаление ненужных программ</li>
+            <li>Cleaning temporary files and cache</li>
+            <li>Monitoring hidden running programs</li>
+            <li>Faster detection of simple viruses</li>
+            <li>Automatic detection of malicious files</li>
+            <li>Safe removal of unnecessary programs</li>
         </ul>
-        <p>Viktor Antivirus  — ваш личный помощник для поддержания безопасности вашего ПК!</p>
+        <p>Viktor Antivirus – your personal assistant for maintaining PC security!</p>
     </div>
 
     <footer>
-        <p>&copy; 2025 Viktor Programs. Все права защищены.</p>
+        <p>&copy; 2025 Viktor Programs. All rights reserved.</p>
+        <a href="https://t.me/ViktorprogV" target="_blank">
+            <button class="tg-button">Join our Telegram</button>
+        </a>
     </footer>
 
-<audio id="audioPlayer" preload="auto">
-    <source src="https://github.com/KUKPOK48/ViktorPrograms/raw/refs/heads/main/skachat-foto-gde-devushka-lejit-ogromnaya-pod-samoletom.mp3" type="audio/mp3">
-    Ваш браузер не поддерживает тег audio.
-</audio>
-
+    <audio id="audioPlayer" preload="auto">
+        <source src="https://github.com/KUKPOK48/ViktorPrograms/raw/refs/heads/main/skachat-foto-gde-devushka-lejit-ogromnaya-pod-samoletom.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
 
     <script>
         const audio = document.getElementById('audioPlayer');
@@ -200,8 +190,9 @@
         }
         function stopSound() {
             audio.pause();
-            audio.currentTime = 0; 
+            audio.currentTime = 0;
         }
     </script>
 </body>
 </html>
+
