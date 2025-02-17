@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viktor Programs</title>
     <style>
+        /* Full-page background */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,6 +14,10 @@
             background-size: cover;
             color: #fff;
             overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         header {
@@ -25,6 +30,7 @@
             gap: 10px;
             position: relative;
             z-index: 2;
+            animation: fadeIn 2s ease-out;
         }
 
         header img {
@@ -51,6 +57,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             z-index: 2;
+            animation: fadeIn 2s ease-out;
         }
 
         b {
@@ -89,6 +96,7 @@
             margin-top: 20px;
             position: relative;
             z-index: 2;
+            animation: fadeIn 2s ease-out;
         }
 
         .info-section {
@@ -98,7 +106,7 @@
             border-radius: 10px;
             margin: 20px auto;
             max-width: 600px;
-            animation: fadeIn 2s ease-in-out forwards;
+            animation: fadeIn 2s ease-out;
         }
 
         .info-section p {
@@ -112,7 +120,7 @@
             border-radius: 10px;
             margin: 20px auto;
             max-width: 800px;
-            animation: fadeIn 2s ease-in-out forwards;
+            animation: fadeIn 2s ease-out;
         }
 
         .tg-button {
@@ -137,6 +145,27 @@
         .tg-button:active {
             transform: scale(0.95);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -195,4 +224,3 @@
     </script>
 </body>
 </html>
-
