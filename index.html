@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktor Booster</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('C:/Users/andre/Desktop/JOTF/сайт/ыфв/V/сфйт/0ba0d609-5c9a-450b-9cd8-14213be2918d.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+        }
+
+        /* Шапка */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header img {
+            width: 100px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        /* Основной контент */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px); /* Добавляем размытие фона */
+            position: relative;
+            z-index: 2;
+        }
+
+        b {
+            color: #007BFF;
+        }
+
+        /* Кнопка "Скачать" */
+        button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(45deg, #007BFF, #004DFF);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(51, 51, 51, 0.8);
+            color: white;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Анимация заголовка */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Секция с информацией */
+        .info-section {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .info-section p {
+            line-height: 1.8;
+        }
+
+        /* Анимация появления */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Нижний контент */
+        .bottom-content {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* Типографика для нижнего контента */
+        .bottom-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .bottom-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <img 
+            src="e4aad658-e959-41d3-a6f1-79aa5aa1e27a-removebg-preview (1).png" 
+            alt="Логотип Viktor Booster" 
+            onmouseover="playSound()" 
+            onmouseout="stopSound()"
+        >
+        <h1>Viktor Booster</h1>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="info-section">
+            <p><b>Программа для разгона вашего ПК</b></p>
+            <h2>v1.0.0</h2>
+            <p>Viktor Booster — это инструмент, который поможет вам значительно увеличить производительность вашего компьютера.</p>
+            <p>Очищает ненужные файлы, оптимизирует работу процессора и памяти, а также улучшает общую скорость работы системы.</p>
+        </div>
+
+        <!-- Кнопка "Скачать" -->
+        <a href="ViktorAntivirus.exe" download="ViktorAntivirus.exe">
+            <button>Скачать Viktor Booster</button>
+        </a>        
+    </main>
+
+    <!-- Нижний контент -->
+    <div class="bottom-content">
+        <h2>Основные функции:</h2>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Очистка временных файлов и кэша</li>
+            <li>Оптимизация использования ЦП и RAM</li>
+            <li>Ускорение загрузки Windows</li>
+            <li>Автоматическое выявление проблем производительности</li>
+            <li>Безопасное удаление ненужных программ</li>
+        </ul>
+        <p>Viktor Booster — ваш личный помощник для поддержания высокой производительности вашего ПК!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Viktor Booster. Все права защищены.</p>
+    </footer>
+
+    <audio id="audioPlayer" preload="auto">
+        <source src="pesnya-bahmut-bahmut-vas-segodnya-mp3.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает тег audio.
+    </audio>
+
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        function playSound() {
+            audio.play();
+        }
+        function stopSound() {
+            audio.pause();
+            audio.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>
