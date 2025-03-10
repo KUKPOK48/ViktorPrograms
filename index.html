@@ -94,11 +94,16 @@
             color: #007BFF;
             font-weight: bold;
         }
-        
+ body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
         .cursor-ring {
             position: fixed;
             width: 15px;
-            height:15px;
+            height: 15px;
             border: 1px solid orange; /* Тонкая граница кольца */
             border-radius: 20%;
             transform: translate(-50%, -50%);
@@ -130,16 +135,12 @@
         </nav>
     </div>
 
-
-    <div class="cursor-ring"></div>
+<div class="cursor-ring"></div>
 
     <script>
-   
         const cursorRing = document.querySelector('.cursor-ring');
-        document.addEventListener('mousemove', (e) => {
 
-            cursorDot.style.left = `${e.clientX}px`;
-            cursorDot.style.top = `${e.clientY}px`;
+        document.addEventListener('mousemove', (e) => {
 
             cursorRing.style.left = `${e.clientX}px`;
             cursorRing.style.top = `${e.clientY}px`;
