@@ -169,6 +169,31 @@
                 transform: translateX(0);
             }
         }
+              body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            border: 1px solid orange; /* Тонкая граница кольца */
+            border-radius: 20%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -191,6 +216,18 @@
         <h1>Viktor Programs</h1>
     </header>
 
+    <div class="cursor-ring"></div>
+
+    <script>
+        const cursorRing = document.querySelector('.cursor-ring');
+
+        document.addEventListener('mousemove', (e) => {
+
+            cursorRing.style.left = `${e.clientX}px`;
+            cursorRing.style.top = `${e.clientY}px`;
+        });
+    </script>
+    
     <main>
         <div class="info-section">
             <p><b>SOON</b></p>
