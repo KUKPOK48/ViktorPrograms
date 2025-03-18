@@ -209,6 +209,17 @@
         </ul>
     </nav>
 </div>
+    <div class="cursor-ring"></div>
+
+    <script>
+        const cursorRing = document.querySelector('.cursor-ring');
+
+        document.addEventListener('mousemove', (e) => {
+
+            cursorRing.style.left = `${e.clientX}px`;
+            cursorRing.style.top = `${e.clientY}px`;
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -228,17 +239,6 @@
     <button>Скачать Viktor Antivirus</button>
 </a>
     </main>
-<div class="cursor-ring"></div>
-
-    <script>
-        const cursorRing = document.querySelector('.cursor-ring');
-
-        document.addEventListener('mousemove', (e) => {
-
-            cursorRing.style.left = `${e.clientX}px`;
-            cursorRing.style.top = `${e.clientY}px`;
-        });
-    </script>
     <div class="bottom-content">
         <h2>Main Features:</h2>
         <ul style="list-style-type: disc; padding-left: 20px;">
