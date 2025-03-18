@@ -18,6 +18,17 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        
+        .cursor-ring {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            border: 1px solid orange;
+            border-radius: 20%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: rotate 2s linear infinite;
+        }
 
         .menu {
             position: absolute;
@@ -173,17 +184,6 @@
             margin: 0;
             height: 100vh;
             overflow: hidden;
-        }
-
-        .cursor-ring {
-            position: fixed;
-            width: 15px;
-            height: 15px;
-            border: 1px solid orange; /* Тонкая граница кольца */
-            border-radius: 20%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            animation: rotate 2s linear infinite;
         }
 
         @keyframes rotate {
