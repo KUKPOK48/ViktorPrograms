@@ -105,12 +105,11 @@
             color: #007BFF;
             font-weight: bold;
         }
- body {
+        body {
             margin: 0;
             height: 100vh;
             overflow: hidden;
         }
-
 
         @keyframes rotate {
             from {
@@ -119,6 +118,28 @@
             to {
                 transform: translate(-50%, -50%) rotate(360deg);
             }
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher button {
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .language-switcher button:hover {
+            background: rgba(0, 0, 0, 0.9);
         }
     </style>
 </head>
@@ -135,16 +156,72 @@
         </nav>
     </div>
 
-<div class="cursor-ring"></div>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ru')">Русский</button>
+        <button onclick="changeLanguage('et')">Eesti</button>
+    </div>
+
+    <div class="cursor-ring"></div>
 
     <script>
         const cursorRing = document.querySelector('.cursor-ring');
 
         document.addEventListener('mousemove', (e) => {
-
             cursorRing.style.left = `${e.clientX}px`;
             cursorRing.style.top = `${e.clientY}px`;
         });
+
+        // Language Data
+        const translations = {
+            en: {
+                title: "Viktor Programs",
+                description: "Welcome to the website of <span class='highlight'>Viktor Programs</span> — your reliable protection in the digital world.<br>We have created innovative software that ensures complete security for your computer.",
+                goal: "Our goal is to make internet usage safe and comfortable for every user. With our program, you can:",
+                features: [
+                    "Protect your PC from viruses and malicious software.",
+                    "Optimize system performance.",
+                    "Remove temporary files and free up space."
+                ]
+            },
+            ru: {
+                title: "Виктор Программы",
+                description: "Добро пожаловать на сайт <span class='highlight'>Виктор Программы</span> — ваш надежный защитник в цифровом мире.<br>Мы создали инновационное программное обеспечение, которое обеспечивает полную безопасность вашего компьютера.",
+                goal: "Наша цель — сделать использование интернета безопасным и комфортным для каждого пользователя. С нашей программой вы можете:",
+                features: [
+                    "Защитить ваш ПК от вирусов и вредоносного ПО.",
+                    "Оптимизировать производительность системы.",
+                    "Удалять временные файлы и освобождать место."
+                ]
+            },
+            et: {
+                title: "Viktori Programmid",
+                description: "Tere tulemast <span class='highlight'>Viktori Programmid</span> veebilehele — teie usaldusväärne kaitse digimaailmas.<br>Meie loodud innovaatiline tarkvara tagab teie arvuti täieliku turvalisuse.",
+                goal: "Meie eesmärk on muuta interneti kasutamine ohutuks ja mugavaks igale kasutajale. Meie programmiga saate:",
+                features: [
+                    "Kaitsta oma arvutit viiruste ja kahjuliku tarkvara eest.",
+                    "Optimeerida süsteemi jõudlust.",
+                    "Eemaldada ajutised failid ja vabastada ruumi."
+                ]
+            }
+        };
+
+        // Change Language Function
+        function changeLanguage(lang) {
+            const data = translations[lang];
+            document.querySelector('.main-content h1').innerHTML = data.title;
+            document.querySelector('.main-content p:nth-of-type(1)').innerHTML = data.description;
+            document.querySelector('.main-content p:nth-of-type(2)').innerHTML = data.goal;
+
+            const featureList = document.querySelectorAll('.main-content ul li');
+            data.features.forEach((feature, index) => {
+                featureList[index].textContent = feature;
+            });
+        }
+
+        // Set Default Language to English
+        window.onload = () => changeLanguage('en');
     </script>
     
     <div class="main-content">
